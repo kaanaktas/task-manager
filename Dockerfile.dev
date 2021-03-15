@@ -1,0 +1,20 @@
+FROM golang:1.15-alpine as builder
+
+WORKDIR /app
+
+COPY go.mod go.sum ./
+
+RUN go mod download
+
+COPY . .
+
+# Build manager main
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o manager ./cmd/manager
+
+FROM scratch
+
+WORKDIR /root/
+
+COPY --from=builder /app/manager .
+
+EXPOSE 8080
