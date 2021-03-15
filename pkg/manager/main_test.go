@@ -16,9 +16,7 @@ func TestMain(m *testing.M) {
 	if os.Getenv("DATASOURCE_URL") == "" {
 		_ = os.Setenv("DATASOURCE_URL", "../../testdata/task.sqlite")
 	}
-
-	_ = os.Setenv("INTERNAL_SIGN_KEY", "../../certs/internal_signing.key")
-
+	
 	log.Print("SESSION START")
 	dbx := store.LoadDBConnection()
 
