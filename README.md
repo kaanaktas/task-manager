@@ -56,7 +56,8 @@ Docker compose provides us a compact environment, which includes all dependencie
 
 ###### **Request**
 
->curl -X POST -v http://localhost:8080/api/new/task_65564
+>curl -X POST -v http://localhost:8080/api/task
+> name=new_task
 
 ###### **Response**
 
@@ -64,7 +65,7 @@ Docker compose provides us a compact environment, which includes all dependencie
 
 ###### **Request**
 
->curl -X GET -v http://localhost:8080/api/tasks
+>curl -X GET -v http://localhost:8080/api/task
 
 ###### **Response**
 
@@ -85,7 +86,7 @@ Docker compose provides us a compact environment, which includes all dependencie
 
 ###### **Request**
 
->curl -X GET -v http://localhost:8080/api/tasks/<task_id>
+>curl -X GET -v http://localhost:8080/api/task/<task_id>
 
 ###### **Response**
 
@@ -99,7 +100,7 @@ Docker compose provides us a compact environment, which includes all dependencie
 
 ###### **Request**
 
->curl -X DELETE -v http://localhost:8080/api/tasks/<task_id>
+>curl -X DELETE -v http://localhost:8080/api/task/<task_id>
 
 ###### **Response**
 
@@ -107,7 +108,7 @@ Docker compose provides us a compact environment, which includes all dependencie
 
 ###### **Request**
 
->curl -X PUT -v http://localhost:8080/api/tasks/<task_id>
+>curl -X PUT -v http://localhost:8080/api/task/<task_id>
 
 ###### **Response**
 
