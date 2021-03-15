@@ -56,9 +56,7 @@ Docker compose provides us a compact environment, which includes all dependencie
 
 ###### **Request**
 
->curl -X POST -v http://localhost:8080/api/task
-> 
-> name=new_task
+>curl -X POST -v http://localhost:8080/api/task -d 'name=new_task'
 
 ###### **Response**
 
