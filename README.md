@@ -1,3 +1,4 @@
+[![task-manager-ci](https://github.com/kaanaktas/task-manager/actions/workflows/flow.yml/badge.svg)](https://github.com/kaanaktas/task-manager/actions/workflows/flow.yml)
 
 # Installation and usage
 
